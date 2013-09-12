@@ -5,16 +5,35 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
+        <!--
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        -->
+        <title>Scupio</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Google+ Sharing meta data -->
+        <meta itemprop="name" content="SCUPIO TV+">
+        <meta itemprop="description" content="SCUPIO plus your TV">
+        <meta itemprop="image" content="http://static.wixstatic.com/media/8cd9e6_52a02f77ef52414ed97342cdd075fa1d.png_srz_1238_928_85_22_0.50_1.20_0.00_png_srz">
+
+        <!-- FB Sharing meta data -->
+        <meta name="description" content="Your TV is on Facebook">
+        <link rel="image_src" href="http://davidrainoshek.com/wp-content/uploads/2013/06/Facebook-TV.jpg">
+
+        <!-- OpenGraph meta data -->
+        <meta property="og:title" content="SCUPIO Open TV">
+        <meta property="og:description" content="SCUPIO is opening your TV">
+        <meta property="og:image" content="http://img51.xooimage.com/files/1/4/d/77861_14562090855...925101_o-22b5b76.jpg">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+        <script type="text/javascript" src="http://dev.teltel.com/louis/9x9-sdk/js/nn-sdk.js"></script>
+        <script type="text/javascript" src="./js/main.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -22,12 +41,31 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div class="tv-widget">
+            <div class="tv-holder">
+                <div id="ytplayer_holder">
+                    <div id="ytplayer"></div>
+                    <div id="ytpreload"></div>
+                </div>
+                <div id="blank_screen"></div>
+                <div id="control_panel" class="ui-widget-header ui-corner-all">
+                    <div id="lcd_screen" class="ui-widget">按一下“電源”啟動 &nbsp;&nbsp;---------------&gt;</div>
+                    <button id="btn_power"><small>電源</small></button>
+                    <button id="btn_mute"><small>靜音</small></button>
+                    <button id="btn_lower"><small>小聲</small></button>
+                    <button id="btn_louder"><small>大聲</small></button>
+                    <button id="btn_next"><small>下一台</small></button>
+                </div>
+            </div>
+        </div>
+        <div style="clear:both;height:10px;display:none"></div>
 
+        <!--
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -36,7 +74,7 @@
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+            ga('create','UA-27493799-1');ga('send','pageview');
         </script>
     </body>
 </html>
